@@ -3,7 +3,8 @@ import { z } from 'zod'
 const envVars = z.object({
   DATABASE_AUTH_TOKEN: z.string(),
   DATABASE_URL: z.string().url(),
-  PORT: z.string().optional()
+  PORT: z.string().optional(),
+  API_KEY: z.string()
 })
 
 envVars.parse(process.env)
