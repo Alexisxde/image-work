@@ -1,0 +1,52 @@
+{
+  "name": "tareaplus-backend",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "dotenv": "16.4.5",
+    "drizzle-orm": "^0.36.4",
+    "express": "4.21.1"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.0",
+    "@types/node": "22.10.1",
+    "drizzle-kit": "^0.28.1",
+    "ts-node": "10.9.2",
+    "ts-node-dev": "2.0.0",
+    "ts-standard": "^12.0.2",
+    "typescript": "5.7.2",
+    "zod": "^3.23.8"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/ts-standard/eslintrc.json"
+    ],
+    "rules": {
+      "@typescript-eslint/no-namespace": "off",
+      "@typescript-eslint/explicit-function-return-type": "error",
+      "@typescript-eslint/array-type": "error",
+      "camelcase": "off",
+      "space-before-function-paren": "off",
+      "spaced-comment": "off",
+      "prefer-const": "off",
+      "no-prototype-builtins": "off",
+      "no-console": "error",
+      "no-label-var": "error",
+      "no-multi-str": "error",
+      "no-negated-condition": "error",
+      "no-nested-ternary": "error",
+      "no-unneeded-ternary": "error",
+      "no-var": "error"
+    }
+  }
+}
