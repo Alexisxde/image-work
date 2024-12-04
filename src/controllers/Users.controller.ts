@@ -2,7 +2,7 @@ import {
   getAllUsersModel,
   getOneUserModel,
   postUserModel
-} from '../models/Users'
+} from '../models/Users.model'
 
 /** @types */
 import type { Request, Response } from 'express'

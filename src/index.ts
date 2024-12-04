@@ -1,7 +1,6 @@
 import 'dotenv/config'
 import './config'
-import ValidateAPIKEY from './controllers/middlewares/ValidateAPIKEY'
-import Users from './routes/Users'
+import Users from './routes/Users.route'
 import server from './server'
 
 server.get('/', (_, res) => {
@@ -12,8 +11,8 @@ server.get('/', (_, res) => {
   })
 })
 
-server.use('/api/users', ValidateAPIKEY, Users)
-// server.use('/api/tasks', ValidateAPIKEY, Tasks)
+server.use('/api/users', Users)
+// server.use('/api/tasks', Tasks)
 
 server.listen(process.env.PORT, () => {
   console.log(`[server]: http://localhost:${process.env.PORT ?? 3000}`)
