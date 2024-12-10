@@ -1,10 +1,6 @@
 import express from 'express'
-import {
-  getAllUsers,
-  getOneUser,
-  postUser
-} from '../controllers/Users.controller'
-import ValidateAPIKEY from '../middlewares/ValidateAPIKEY.middleware'
+import { getAllUsers, getOneUser, postUser } from '../controllers/Users'
+import ValidateAPIKEY from '../middlewares/ValidateAPIKEY'
 
 const router = express.Router()
 

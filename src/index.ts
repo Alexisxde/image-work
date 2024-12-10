@@ -1,19 +1,23 @@
 import 'dotenv/config'
 import './config'
-import Users from './routes/Users.route'
+import { API_URL } from './config'
+import Upload from './routes/Upload'
+import Users from './routes/Users'
 import server from './server'
+
+const PORT = process.env.PORT ?? 3000
 
 server.get('/', (_, res) => {
   res.send({
-    URL: process.env.API_URL,
-    users: `/api/users`,
-    tasks: `/api/tasks`
+    url: API_URL,
+    users: `/api/users`
   })
 })
 
+// ! Falta el middleware de la APIKEY.
 server.use('/api/users', Users)
-// server.use('/api/tasks', Tasks)
+server.use('/api', Upload)
 
-server.listen(process.env.PORT, () => {
-  console.log(`[server]: http://localhost:${process.env.PORT ?? 3000}`)
+server.listen(PORT, () => {
+  console.log(`[server]: http://localhost:${PORT}`)
 })
