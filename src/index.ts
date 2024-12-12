@@ -17,7 +17,8 @@ const PORT = process.env.PORT ?? '3000'
 server.get('/', (_, res) => {
   res.send({
     url: API_URL,
-    users: '/api/users'
+    users: '/api/users',
+    upload: '/api/upload'
   })
 })
 

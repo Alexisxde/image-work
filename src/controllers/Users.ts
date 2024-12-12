@@ -20,7 +20,7 @@ export async function getOneUser(req: Request, res: Response) {
   try {
     const user = await getOneUserModel(req.params.id)
     if (user.length === 0) {
-      res.status(400).json({ message: 'User id not found.' })
+      res.status(400).json({ message: 'Username not found.' })
       return
     }
     res.status(200).json(user)
