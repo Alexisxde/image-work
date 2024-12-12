@@ -8,8 +8,7 @@ const envSchema = z.object({
   API_KEY: z.string(),
   CLOUDINARY_CLOUD_NAME: z.string(),
   CLOUDINARY_API_KEY: z.string(),
-  CLOUDINARY_API_SECRET: z.string(),
-  NODE_ENV: z.enum(['production', 'development'])
+  CLOUDINARY_API_SECRET: z.string()
 })
 
 const { error, success, data } = envSchema.safeParse(process.env)
