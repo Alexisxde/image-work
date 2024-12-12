@@ -8,7 +8,8 @@ const envSchema = z.object({
   API_KEY: z.string(),
   CLOUDINARY_CLOUD_NAME: z.string(),
   CLOUDINARY_API_KEY: z.string(),
-  CLOUDINARY_API_SECRET: z.string()
+  CLOUDINARY_API_SECRET: z.string(),
+  NODE_ENV: z.enum(['production', 'development'])
 })
 
 const { error, success, data } = envSchema.safeParse(process.env)
@@ -32,5 +33,6 @@ export const {
   API_URL,
   CLOUDINARY_CLOUD_NAME,
   CLOUDINARY_API_KEY,
-  CLOUDINARY_API_SECRET
+  CLOUDINARY_API_SECRET,
+  NODE_ENV
 } = data
