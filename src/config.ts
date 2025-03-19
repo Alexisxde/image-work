@@ -4,6 +4,7 @@ const envSchema = z.object({
   PORT: z.string().default('3000'),
   DATABASE_AUTH_TOKEN: z.string(),
   DATABASE_URL: z.string().url(),
+  NODE_ENV: z.string().default('development'),
   API_URL: z.string().default('http://localhost:3000'),
   API_KEY: z.string(),
   CLOUDINARY_CLOUD_NAME: z.string(),

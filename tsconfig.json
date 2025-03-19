@@ -8,7 +8,7 @@
     "module": "CommonJS",
     "moduleResolution": "node",
     "paths": {
-      "@src/*": ["src/*"]
+      "@/*": ["src/*"]
     },
 
     /* Emit */
