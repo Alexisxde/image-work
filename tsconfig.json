@@ -1,31 +1,29 @@
 {
-  "compilerOptions": {
-    /* Language and Environment */
-    "target": "ES2016",
+	"compilerOptions": {
+		/* Language and Environment */
+		"target": "ES2016",
 
-    /* Modules */
-    "baseUrl": "./",
-    "module": "CommonJS",
-    "moduleResolution": "node",
-    "paths": {
-      "@/*": ["src/*"]
-    },
+		/* Modules */
+		"baseUrl": "./",
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"paths": { "@/*": ["src/*"] },
 
-    /* Emit */
-    "outDir": "./build",
-    "rootDir": "./",
-    "sourceMap": true,
+		/* Emit */
+		"outDir": "./build",
+		"rootDir": "./",
+		"sourceMap": true,
 
-    /* Interop Constraint */
-    "esModuleInterop": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+		/* Interop Constraint */
+		"esModuleInterop": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"noFallthroughCasesInSwitch": true,
 
-    "skipLibCheck": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "build"]
+		"skipLibCheck": true
+	},
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "build"]
 }

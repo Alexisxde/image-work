@@ -3,4 +3,5 @@
 migrations
 
 package-lock.json
+pnpm-lock.yaml
 .env
