@@ -3,6 +3,6 @@ import { getAllImages } from '../controllers/Images'
 
 const router = express.Router()
 
-router.get('/:username', getAllImages)
+router.get('/:email', getAllImages)
 
 export default router

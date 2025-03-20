@@ -1,0 +1,17 @@
+@hostname = localhost
+@port = 3000
+@host = http://{{hostname}}:{{port}}
+###
+
+# * Metodo GET para obtener las urls.
+GET {{host}} HTTP/1.1
+###
+# * Metodo GET para obtener todos los usuarios.
+GET {{host}}/api/users HTTP/1.1
+###
+# * Metodo GET para obtener un usuario por el username.
+GET {{host}}/api/users/test-example HTTP/1.1
+###
+# * Metodo GET para obtener todas las imagenes de un usuario.
+GET {{host}}/api/images/@test HTTP/1.1
+###

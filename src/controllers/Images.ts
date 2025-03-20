@@ -6,7 +6,7 @@ import type { Request, Response } from 'express'
 
 export async function getAllImages(req: Request, res: Response) {
   try {
-    const [user] = await getOneUserModel(req.params.username)
+    const [user] = await getOneUserModel(req.params.email)
     if (user) {
       const images = await getUserImages(user.user_id)
       res.status(200).json(images)

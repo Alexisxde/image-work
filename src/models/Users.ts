@@ -9,11 +9,11 @@ export async function getAllUsersModel() {
   return await db.select().from(UsersTable).all()
 }
 
-export async function getOneUserModel(username: string) {
+export async function getOneUserModel(email: string) {
   return await db
     .select()
     .from(UsersTable)
-    .where(sql`${UsersTable.username} = ${username}`)
+    .where(sql`${UsersTable.email} = ${email}`)
     .all()
 }
 

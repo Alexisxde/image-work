@@ -1,0 +1,28 @@
+@hostname = localhost
+@port = 3000
+@host = http://{{hostname}}:{{port}}
+@API_KEY = {{$processEnv API_KEY}}
+###
+
+POST {{host}}/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "test2",
+  "email": "test2@gmail.com"
+}
+
+###
+POST {{host}}/api/upload HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="username"
+
+test-example
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="me.jpg"
+Content-Type: image/jpeg
+
+< C:\Users\Alumno\Downloads\me.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
